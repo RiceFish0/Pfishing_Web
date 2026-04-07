@@ -52,12 +52,32 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 3rem;
+  padding: 1rem 3rem;
   max-width: 1280px;
   margin: 0 auto;
   width: 100%;
 }
-.logo { color: var(--primary); font-size: 2rem; font-weight: 800; cursor: pointer; }
+.logo {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column; /* [核心修改]：改成垂直排列 */
+  align-items: center;    /* [核心修改]：水平居中對齊圖片和文字 */
+  gap: 0.25rem;          /* [更新]：減小垂直間距 */
+}
+
+/* [更新]：優化 logo 圖片的大小 */
+.logo-icon {
+  height: 3rem;           /* [更新]：稍微加大圖片，使其更像示例圖片 */
+  width: auto;
+  object-fit: contain;
+}
+
+/* [更新]：優化 logo 文字的樣式 */
+.logo span {
+  font-size: 1.5rem;       /* [更新]：減小字體大小 */
+  font-weight: 800;
+  color: #FF5000;            /* [更新]：將文字顏色改為黑色，以匹配示例圖片 */
+}
 .desktop-nav { display: flex; gap: 2rem; }
 .desktop-nav a { text-decoration: none; color: var(--text-muted); font-size: 0.875rem; font-weight: 500;}
 .desktop-nav a:hover { color: var(--primary); }
