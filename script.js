@@ -29,6 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
     switchView('verify');
   });
 
+    document.getElementById('btn-forgot-password').addEventListener('click', () => {
+    switchView('verify');
+  });
+
   // 綁定按鈕事件 (前往註冊)
   document.getElementById('btn-go-register').addEventListener('click', () => {
     switchView('register');
