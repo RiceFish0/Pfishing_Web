@@ -157,3 +157,11 @@ input { width: 100%; border: none; background: transparent; padding: 1rem 0; out
 .terms a:hover { color: var(--primary); }
 
 .alert-box { margin-top: 1rem; padding: 0.75rem; background: rgba(255,80,0,0.05); border: 1px solid rgba(255,80,0,0.1); border-radius: 8px; color: var(--primary); font-size: 0.75rem; font-weight: 500; }
+.qr-image {
+  width: 160px;
+  height: 160px;
+  object-fit: contain; /* 確保 QR Code 完整顯示不變形 */
+  border-radius: 8px;
+  background: white; /* 確保有白色底色，增加掃描辨識率 */
+  padding: 8px;      /* 留一點白邊 */
+}
