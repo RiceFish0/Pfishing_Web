@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taobao Modern Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-blur top-right"></div>
+  <div class="bg-blur bottom-left"></div>
+
+  <header>
+    <div class="logo" id="logo-btn">Taobao</div>
+    <nav class="desktop-nav">
+      <a href="#">Feedback</a>
+      <a href="#">Help</a>
+      <a href="#">Global Site</a>
+    </nav>
+  </header>
+
+  <main>
+    
+    <div id="view-login" class="card grid-card">
+      <div class="qr-section">
+        <h2>手機掃碼登入</h2>
+        <p class="subtitle">QR Code Login</p>
+        <div class="qr-box">
+          <div class="qr-placeholder">QR Code 區域</div>
+        </div>
+        <p class="qr-hint">打開 <span>手機淘寶</span> 掃碼登入</p>
+        <div class="links">
+          <a href="#">下載淘寶</a>
+          <a href="#">幫助中心</a>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="flex-between mb-4">
+          <div>
+            <h2>密碼登入</h2>
+            <p class="subtitle">Password Login</p>
+          </div>
+          <button type="button" class="btn-text" id="btn-go-verify">身份驗證 &gt;</button>
+        </div>
+
+        <form>
+          <div class="form-group">
+            <label>帳號名/郵箱/手機號</label>
+            <div class="input-wrapper">
+              <input type="text" placeholder="輸入用戶名">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="flex-between">
+              <label>密碼</label>
+              <button type="button" class="btn-text">忘記密碼?</button>
+            </div>
+            <div class="input-wrapper">
+              <input type="password" placeholder="輸入登入密碼">
+            </div>
+          </div>
+          <button type="button" class="btn-primary mt-2">登入</button>
+        </form>
+
+        <div class="flex-between mt-4 form-footer">
+          <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Alipay</a>
+          </div>
+          <div class="action-links">
+            <button type="button" class="btn-text" id="btn-forgot-account">忘記帳號</button>
+            <button type="button" class="btn-text bold" id="btn-go-register">免費註冊</button>
+          </div>
+        </div>
+
+        <div class="terms">
+          <input type="checkbox" id="terms">
+          <label for="terms">我已閱讀並同意 <a>淘寶平台服務協議</a>、<a>隱私權政策</a>、<a>法律聲明</a> 及 <a>支付寶服務協議</a>。</label>
+        </div>
+      </div>
+    </div>
+
+    <div id="view-register" class="card single-card hidden">
+      <button class="btn-back" data-target="login">✕</button>
+      <div class="header-text">
+        <h1>免費註冊</h1>
+        <p class="subtitle">Create Free Account</p>
+        <div class="divider"></div>
+      </div>
+
+      <form>
+        <div class="form-group">
+          <label>電子信箱 Email</label>
+          <div class="input-wrapper"><input type="email" placeholder="請輸入電子信箱"></div>
+        </div>
+        <div class="form-group">
+          <label>電話號碼 Phone Number</label>
+          <div class="input-wrapper"><input type="tel" placeholder="請輸入電話號碼"></div>
+        </div>
+        <div class="form-group">
+          <label>身分證字號 ID Number</label>
+          <div class="input-wrapper"><input type="text" placeholder="請輸入身分證字號"></div>
+        </div>
+        <div class="form-group">
+          <label>密碼 Password</label>
+          <div class="input-wrapper"><input type="password" placeholder="請輸入登入密碼"></div>
+        </div>
+        <button type="button" class="btn-primary mt-4 rounded-full">立即註冊 Register Now</button>
+        <div class="center-text mt-2">
+          <button type="button" class="btn-text" data-target="login">已有帳號？立即登入 Login Now</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="view-verify" class="card single-card hidden">
+      <button class="btn-back" data-target="login">✕</button>
+      <div class="header-text">
+        <h1>身份驗證</h1>
+        <p class="subtitle">Identity Verification</p>
+        <div class="alert-box">提示：若忘記帳號/密碼，驗證銀行卡身分即可找回帳號/密碼</div>
+        <div class="divider"></div>
+      </div>
+
+      <form>
+        <div class="form-group">
+          <label>銀行帳號 Bank Account Number</label>
+          <div class="input-wrapper"><input type="text" placeholder="請輸入帳號"></div>
+        </div>
+        <div class="form-group">
+          <label>密碼 Password</label>
+          <div class="input-wrapper"><input type="password" placeholder="請輸入交易密碼"></div>
+        </div>
+        <div class="form-group w-50">
+          <label>三碼驗證碼 CVV</label>
+          <div class="input-wrapper"><input type="text" maxlength="3" placeholder="CVV" class="tracking-wide"></div>
+        </div>
+        <button type="button" class="btn-primary mt-4 rounded-full">驗證身分 Verify Identity</button>
+        <div class="center-text mt-2">
+          <button type="button" class="btn-text">忘記支付密碼？ Forgot Payment Password?</button>
+        </div>
+      </form>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">About Taobao</a>
+      <a href="#">Partners</a>
+      <a href="#">Marketing Center</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+    <div class="copyright">© Alibaba.com Taobao. All Rights Reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
